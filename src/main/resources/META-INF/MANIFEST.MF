@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Main-Class: com.phinneyridge.tools.backup.Main
+Specification-Title: Backup Utility Classes
+Specification-Version: 1.0.0
+Specification-Vendor: com.phinneyridge
+Implementation-Title: com.phinneyridge.tools.backup
+Implementation-Version: alpha1
+Implementation-Vendor: com.phinneyridge
