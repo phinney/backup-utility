@@ -7,7 +7,7 @@ The user selects files and or directories that they want to backup and then simp
 
 The utility allows the user to create any number of backup jobs.  A backup job is simply the list of selected files and directories and a set of job options which affect how the backup operation is performed.
 
-![JobOption](Job.png)
+![JobOption](screenshots/Job.png)
 
 If a backup job has encryption enabled, the backed up file are encrypted when stored at the destination. Encrypted files require a password or pass phrase to be entered when the when the file are backed up or restored. The same password or pass phrase is required in order to restore encrypted backup content. The utility cannot recover encrypted content if the password or pass phrase is lost or forgotten.  The utility is however capable of detecting that an encrypted file was supplied with a valid password or pass phrase, but the utility itself it doesn't keep or store the password or pass phrase.
 
