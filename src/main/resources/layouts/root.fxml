@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" minHeight="600" minWidth="600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.phinneyridge.tools.backup.Controller">
+             <MenuBar fx:id="menubar" VBox.vgrow="ALWAYS" />
+        <VBox fx:id="pageScene" VBox.vgrow="ALWAYS">
+        </VBox>
+ </VBox>

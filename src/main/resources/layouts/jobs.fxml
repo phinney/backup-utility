@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="jobRoot" >
+    <VBox style="-fx-padding: 15 15 15 15;" spacing="10" >
+        <children>
+            <HBox  alignment="BASELINE_LEFT">
+                <children>
+                    <Label text="Current Job: "/>
+                    <ChoiceBox fx:id="jobChoice"/>
+                </children>
+            </HBox>
+            <HBox alignment="BASELINE_LEFT" spacing="10">
+                <Button id="chooseDir" text="Choose Backup Location"/>
+                <Text fx:id="destinationDir"  />
+            </HBox>
+            <RadioButton id="alwaysPrompt" selected="true" text=" prompt for destination directory each time backup/restore operation is performed"></RadioButton>
+            <Text text="file replacement policy: "></Text>
+            <RadioButton fx:id="always" text="always write source to destination " selected="true" style="-fx-padding: 0 0 0 20"></RadioButton>
+            <RadioButton fx:id="byDate" text="only replace destination if source date is newer " style="-fx-padding: 0 0 0 20"></RadioButton>
+
+            <HBox>
+                <Text text="Encryption: "/>
+                <ChoiceBox fx:id="encryptionEnabled"/>
+            </HBox>
+              <RadioButton fx:id="addJobName" text="automatically add job name to destination path"></RadioButton>
+              <RadioButton fx:id="addDate" text="automatically add date to destination path"></RadioButton>
+              <HBox  alignment="CENTER" >
+                  <VBox fx:id="numDatesLabel" visible="false" alignment="CENTER">
+                      <Label text="number of date paths to retain before deleting older date paths  "/>
+                      <Label text="(a blank value means that all date paths are retained)"/>
+                  </VBox>
+
+                  <TextField fx:id="numDates" visible="false"/>
+              </HBox>
+        </children>
+    </VBox>
+
+</AnchorPane>
