@@ -11,6 +11,6 @@ If encryption is enabled, backed up files are encrypted before they are written 
 
 A job can be configured to have either the job name and the job execution data/time or both automatically appended to the destination path.  Jobs that have the date/time appended to the destination path can be configured to only keep the last n backup date, where n is user defined value.  For example, keep the last 3 dated backups and delete the oldest dated backup once the limit is reached.
 
-The utility has an embedded User Guide that explains how to use the utility and how backup operations are performed in greater detail. That's a great place to start if you're interested in cloning the project.  
+The utility has an embedded User Guide that explains how to use the utility and how backup operations are performed in greater detail. That's a great place to start if you're interested in cloning the project. Contributor contributions that improve the utility, and very welcomed. The project also contains a snapshot directory.  This directory contains snapshots of the application 3 main windows or views.  That's also another way to quickly familiarize yourself with the application.
 
 Please read the release notes for additional information about installing and using the application.

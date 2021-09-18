@@ -131,6 +131,7 @@ public class UIManager implements UI {
                         "Error");
                 stage.close();
         }
+        System.out.println("classpath=" + System.getProperty("java.class.path"));
     }
 
     @Override
@@ -250,6 +251,10 @@ public class UIManager implements UI {
              * The information it displays comes from the "Notice" file.
              */
             InputStream is = getClass().getClassLoader().getResourceAsStream("\\Notice");
+            if (is == null) {
+                System.out.println("Missing Notice file");
+                return;
+            }
             String notice = "";
             // read the entire Notice file
             try {
@@ -314,6 +319,10 @@ public class UIManager implements UI {
         @Override
         public void handle(Event event) {
             InputStream is = getClass().getClassLoader().getResourceAsStream("\\META-INF\\MANIFEST.MF");
+            if (is == null) {
+                System.out.println("missing \\META-INF\\MANIFEST.MF resource");
+                return;
+            }
             try {
                 Manifest manifest = new Manifest(is);
                 Attributes attr = manifest.getMainAttributes();

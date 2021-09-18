@@ -1,2 +1,6 @@
-out/
+out/*
+!out/backup-utility.jar
+!out/backup-utility-debug.jar
+!out/backup-utitity.sha256
+!out/backup-utitity-debug.sha256
 *.iml

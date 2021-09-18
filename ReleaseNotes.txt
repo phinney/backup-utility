@@ -1,0 +1,53 @@
+Update Utility Release/Status Notes Version 1.0.0 alpha
+
+This is the 1.0.0 alpha release of the Backup Utitity
+
+Current supported OS desktops:
+Windows: yes
+Linux: no
+iOS: no
+
+The code is partially structured to support other OS desktop.
+The utility needs to handle issues caused by OS file system differences;
+and that work just hasn't been completed and tested.
+
+The code has been tested using:
+  OpenJDK version "14.0.2"
+  OpenJdk version "11.0.10"
+using javafx
+  javafx version 11.0.2+1
+
+Code needs to be tested with other jvm versions, but that work just hasn't been done.
+
+Running the application:
+
+
+You must have a java runtime environment installed on your host machine.
+You must also have the javafx sdk installed on your host machine.
+The java command line needs both the module path to the javafx-sdk lib directory and
+the modules javafx.controls,javafx.fxml,javafx.web specified.
+
+example:
+java --module-path C:/java/javafx/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml,javafx.web -jar backup-utility.jar
+
+The backup-utility.jar can be found in the projects github's repository out directory. This jar was compile with
+a java 11 version.   If you need to work with a lower java jre version, you may need to re-build the jar from the
+source. There is also a backup-utility-debug.jar.  This is contains everything that the backup-utility.jar contains,
+plus the addition of the source java files.
+
+I've been using the IntelliJ IDE for building the project. Here's a couple of pointers on setting up the
+project using this IDE.
+
+1.) make sure that Project Structure.../Modules/Source has the sources and resources folder properly associate with
+ their path.  A good way of knowing that you haven't set it up correctly is that you either don't see the
+ compiled classes in the out directory, or you don't see the files contain in your resources directory in the out
+ directory.  If you don't see the class files generated, you don't have the sources folder properly set. And if
+ you don't see you resources contained in the out directory, you don't have the resources folder properly set.
+
+ 2.) To debug the code, you need to set up a run/debug configuration.  The --module-path and --add-modules parameters
+ need to be added to "vm option" input not to the "program argument" input.  If you don't see the vm option input, you
+ have to click on "Modify options".  You'll get a drop down list of options that you can select or deselect.
+ Check the "add VM option". You'll then get an input field where you can add:
+ --module-path C:/java/javafx/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml,javafx.web
+
+
